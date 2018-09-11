@@ -1,12 +1,12 @@
 module.exports = function longestConsecutiveLength(array) {
-  var result = 0;
-  var set = new Set(array);
+  let result = 0;
+  const set = new Set(array);
 
-  for (var i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     // if an element (e.g. 5) has no predecessor (4)
-    // he is the first element of a sequence
+    // it is the first element of a sequence
     if (!(set.has(array[i] - 1))) {
-      var j = array[i];
+      let j = array[i];
       // check for next elements 
       while (set.has(j)) {
         j++;
